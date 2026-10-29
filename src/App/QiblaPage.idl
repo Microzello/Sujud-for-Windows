@@ -1,0 +1,8 @@
+namespace Sujud
+{
+    [default_interface]
+    runtimeclass QiblaPage : Microsoft.UI.Xaml.Controls.Page
+    {
+        QiblaPage();
+    }
+}

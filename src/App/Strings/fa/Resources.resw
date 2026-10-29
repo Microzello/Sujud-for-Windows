@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AppDescription" xml:space="preserve">
+    <value>اوقات شرعی امروز و شمارش معکوس تا نماز بعدی.</value>
+  </data>
+  <data name="AsrHanafi" xml:space="preserve">
+    <value>حنفی</value>
+  </data>
+  <data name="AsrMethod" xml:space="preserve">
+    <value>روش محاسبهٔ عصر</value>
+  </data>
+  <data name="AsrStandard" xml:space="preserve">
+    <value>استاندارد (شافعی، مالکی، حنبلی)</value>
+  </data>
+  <data name="AtTime" xml:space="preserve">
+    <value>ساعت {0}</value>
+  </data>
+  <data name="CalculationMethod" xml:space="preserve">
+    <value>روش محاسبه</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>لغو</value>
+  </data>
+  <data name="CardinalE" xml:space="preserve">
+    <value>شرق</value>
+  </data>
+  <data name="CardinalN" xml:space="preserve">
+    <value>شمال</value>
+  </data>
+  <data name="CardinalS" xml:space="preserve">
+    <value>جنوب</value>
+  </data>
+  <data name="CardinalW" xml:space="preserve">
+    <value>غرب</value>
+  </data>
+  <data name="CurrentLocation" xml:space="preserve">
+    <value>مکان فعلی</value>
+  </data>
+  <data name="InDuration" xml:space="preserve">
+    <value>{0} دیگر</value>
+  </data>
+  <data name="Latitude" xml:space="preserve">
+    <value>عرض جغرافیایی</value>
+  </data>
+  <data name="Locating" xml:space="preserve">
+    <value>در حال یافتن موقعیت…</value>
+  </data>
+  <data name="Location" xml:space="preserve">
+    <value>مکان</value>
+  </data>
+  <data name="LocationAccessNeeded" xml:space="preserve">
+    <value>دسترسی به موقعیت لازم است</value>
+  </data>
+  <data name="Longitude" xml:space="preserve">
+    <value>طول جغرافیایی</value>
+  </data>
+  <data name="MethodEgypt" xml:space="preserve">
+    <value>سازمان عمومی نقشه‌برداری مصر</value>
+  </data>
+  <data name="MethodFrance" xml:space="preserve">
+    <value>مسلمانان فرانسه</value>
+  </data>
+  <data name="MethodISNA" xml:space="preserve">
+    <value>انجمن اسلامی آمریکای شمالی</value>
+  </data>
+  <data name="MethodJafari" xml:space="preserve">
+    <value>مؤسسهٔ تحقیقاتی لوا، قم</value>
+  </data>
+  <data name="MethodKarachi" xml:space="preserve">
+    <value>دانشگاه علوم اسلامی کراچی</value>
+  </data>
+  <data name="MethodMWL" xml:space="preserve">
+    <value>رابطهٔ جهان اسلام</value>
+  </data>
+  <data name="MethodMakkah" xml:space="preserve">
+    <value>دانشگاه ام‌القری، مکه</value>
+  </data>
+  <data name="MethodRussia" xml:space="preserve">
+    <value>ادارهٔ معنوی مسلمانان روسیه</value>
+  </data>
+  <data name="MethodSingapore" xml:space="preserve">
+    <value>شورای دینی اسلامی سنگاپور</value>
+  </data>
+  <data name="MethodTehran" xml:space="preserve">
+    <value>مؤسسهٔ ژئوفیزیک دانشگاه تهران</value>
+  </data>
+  <data name="NextPrayerIn" xml:space="preserve">
+    <value>{0} {1} دیگر</value>
+  </data>
+  <data name="NextPrayerWidgetDescription" xml:space="preserve">
+    <value>شمارش معکوس تا نماز بعدی.</value>
+  </data>
+  <data name="NextPrayerWidgetName" xml:space="preserve">
+    <value>نماز بعدی</value>
+  </data>
+  <data name="OpenSujud" xml:space="preserve">
+    <value>سجود را باز کنید</value>
+  </data>
+  <data name="PrayerAsr" xml:space="preserve">
+    <value>عصر</value>
+  </data>
+  <data name="PrayerDhuhr" xml:space="preserve">
+    <value>ظهر</value>
+  </data>
+  <data name="PrayerFajr" xml:space="preserve">
+    <value>صبح</value>
+  </data>
+  <data name="PrayerIsha" xml:space="preserve">
+    <value>عشا</value>
+  </data>
+  <data name="PrayerMaghrib" xml:space="preserve">
+    <value>مغرب</value>
+  </data>
+  <data name="PrayerSunrise" xml:space="preserve">
+    <value>طلوع آفتاب</value>
+  </data>
+  <data name="PrayerTimeNotification" xml:space="preserve">
+    <value>وقت نماز {0}</value>
+  </data>
+  <data name="PrayerTimes" xml:space="preserve">
+    <value>اوقات شرعی</value>
+  </data>
+  <data name="PrayerTimesWidgetDescription" xml:space="preserve">
+    <value>اوقات شرعی امروز و شمارش معکوس تا نماز بعدی.</value>
+  </data>
+  <data name="PrayerTimesWidgetName" xml:space="preserve">
+    <value>اوقات شرعی</value>
+  </data>
+  <data name="Qibla" xml:space="preserve">
+    <value>قبله</value>
+  </data>
+  <data name="ReverseCompass" xml:space="preserve">
+    <value>معکوس کردن قطب‌نما</value>
+  </data>
+  <data name="SetLocation" xml:space="preserve">
+    <value>تنظیم مکان</value>
+  </data>
+  <data name="Tomorrow" xml:space="preserve">
+    <value>{0}، فردا</value>
+  </data>
+</root>

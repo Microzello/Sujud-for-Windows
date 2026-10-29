@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AppDescription" xml:space="preserve">
+    <value>Today’s prayer times and the countdown to the next.</value>
+  </data>
+  <data name="AsrHanafi" xml:space="preserve">
+    <value>Hanafi</value>
+  </data>
+  <data name="AsrMethod" xml:space="preserve">
+    <value>Asr Method</value>
+  </data>
+  <data name="AsrStandard" xml:space="preserve">
+    <value>Standard (Shafi‘i, Maliki, Hanbali)</value>
+  </data>
+  <data name="AtTime" xml:space="preserve">
+    <value>at {0}</value>
+  </data>
+  <data name="CalculationMethod" xml:space="preserve">
+    <value>Calculation Method</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="CardinalE" xml:space="preserve">
+    <value>E</value>
+  </data>
+  <data name="CardinalN" xml:space="preserve">
+    <value>N</value>
+  </data>
+  <data name="CardinalS" xml:space="preserve">
+    <value>S</value>
+  </data>
+  <data name="CardinalW" xml:space="preserve">
+    <value>W</value>
+  </data>
+  <data name="CurrentLocation" xml:space="preserve">
+    <value>Current Location</value>
+  </data>
+  <data name="InDuration" xml:space="preserve">
+    <value>in {0}</value>
+  </data>
+  <data name="Latitude" xml:space="preserve">
+    <value>Latitude</value>
+  </data>
+  <data name="Locating" xml:space="preserve">
+    <value>Locating…</value>
+  </data>
+  <data name="Location" xml:space="preserve">
+    <value>Location</value>
+  </data>
+  <data name="LocationAccessNeeded" xml:space="preserve">
+    <value>Location Access Needed</value>
+  </data>
+  <data name="Longitude" xml:space="preserve">
+    <value>Longitude</value>
+  </data>
+  <data name="MethodEgypt" xml:space="preserve">
+    <value>Egyptian General Authority of Survey</value>
+  </data>
+  <data name="MethodFrance" xml:space="preserve">
+    <value>Muslims of France</value>
+  </data>
+  <data name="MethodISNA" xml:space="preserve">
+    <value>Islamic Society of North America</value>
+  </data>
+  <data name="MethodJafari" xml:space="preserve">
+    <value>Leva Research Institute, Qom</value>
+  </data>
+  <data name="MethodKarachi" xml:space="preserve">
+    <value>University of Islamic Sciences, Karachi</value>
+  </data>
+  <data name="MethodMWL" xml:space="preserve">
+    <value>Muslim World League</value>
+  </data>
+  <data name="MethodMakkah" xml:space="preserve">
+    <value>Umm al-Qura University, Makkah</value>
+  </data>
+  <data name="MethodRussia" xml:space="preserve">
+    <value>Spiritual Administration of Muslims of Russia</value>
+  </data>
+  <data name="MethodSingapore" xml:space="preserve">
+    <value>Islamic Religious Council of Singapore</value>
+  </data>
+  <data name="MethodTehran" xml:space="preserve">
+    <value>Institute of Geophysics, University of Tehran</value>
+  </data>
+  <data name="NextPrayerIn" xml:space="preserve">
+    <value>{0} in {1}</value>
+  </data>
+  <data name="NextPrayerWidgetDescription" xml:space="preserve">
+    <value>Counts down to the next prayer.</value>
+  </data>
+  <data name="NextPrayerWidgetName" xml:space="preserve">
+    <value>Next Prayer</value>
+  </data>
+  <data name="OpenSujud" xml:space="preserve">
+    <value>Open Sujud</value>
+  </data>
+  <data name="PrayerAsr" xml:space="preserve">
+    <value>Asr</value>
+  </data>
+  <data name="PrayerDhuhr" xml:space="preserve">
+    <value>Dhuhr</value>
+  </data>
+  <data name="PrayerFajr" xml:space="preserve">
+    <value>Fajr</value>
+  </data>
+  <data name="PrayerIsha" xml:space="preserve">
+    <value>Isha</value>
+  </data>
+  <data name="PrayerMaghrib" xml:space="preserve">
+    <value>Maghrib</value>
+  </data>
+  <data name="PrayerSunrise" xml:space="preserve">
+    <value>Sunrise</value>
+  </data>
+  <data name="PrayerTimeNotification" xml:space="preserve">
+    <value>{0} prayer time</value>
+  </data>
+  <data name="PrayerTimes" xml:space="preserve">
+    <value>Prayer Times</value>
+  </data>
+  <data name="PrayerTimesWidgetDescription" xml:space="preserve">
+    <value>Today’s prayer times and the countdown to the next.</value>
+  </data>
+  <data name="PrayerTimesWidgetName" xml:space="preserve">
+    <value>Prayer Times</value>
+  </data>
+  <data name="Qibla" xml:space="preserve">
+    <value>Qibla</value>
+  </data>
+  <data name="ReverseCompass" xml:space="preserve">
+    <value>Reverse compass</value>
+  </data>
+  <data name="SetLocation" xml:space="preserve">
+    <value>Set Location</value>
+  </data>
+  <data name="Tomorrow" xml:space="preserve">
+    <value>{0}, tomorrow</value>
+  </data>
+</root>

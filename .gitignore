@@ -1,0 +1,11 @@
+.vs/
+bin/
+obj/
+packages/
+AppPackages/
+BundleArtifacts/
+Generated Files/
+src/App/XamlMetaDataProvider.*
+*.user
+*.aps
+node_modules/

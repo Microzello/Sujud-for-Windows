@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "generate": "node generate.mjs > ../Core.Tests/ReferenceCases.inc"
+  },
+  "devDependencies": {
+    "praytime": "3.2.0"
+  }
+}

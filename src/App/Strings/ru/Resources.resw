@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AppDescription" xml:space="preserve">
+    <value>Время намазов на сегодня и обратный отсчёт до следующего.</value>
+  </data>
+  <data name="AsrHanafi" xml:space="preserve">
+    <value>Ханафитский</value>
+  </data>
+  <data name="AsrMethod" xml:space="preserve">
+    <value>Метод расчёта Аср</value>
+  </data>
+  <data name="AsrStandard" xml:space="preserve">
+    <value>Стандартный (шафиитский, маликитский, ханбалитский)</value>
+  </data>
+  <data name="AtTime" xml:space="preserve">
+    <value>в {0}</value>
+  </data>
+  <data name="CalculationMethod" xml:space="preserve">
+    <value>Метод расчёта</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Отмена</value>
+  </data>
+  <data name="CardinalE" xml:space="preserve">
+    <value>В</value>
+  </data>
+  <data name="CardinalN" xml:space="preserve">
+    <value>С</value>
+  </data>
+  <data name="CardinalS" xml:space="preserve">
+    <value>Ю</value>
+  </data>
+  <data name="CardinalW" xml:space="preserve">
+    <value>З</value>
+  </data>
+  <data name="CurrentLocation" xml:space="preserve">
+    <value>Текущее местоположение</value>
+  </data>
+  <data name="InDuration" xml:space="preserve">
+    <value>через {0}</value>
+  </data>
+  <data name="Latitude" xml:space="preserve">
+    <value>Широта</value>
+  </data>
+  <data name="Locating" xml:space="preserve">
+    <value>Определение местоположения…</value>
+  </data>
+  <data name="Location" xml:space="preserve">
+    <value>Местоположение</value>
+  </data>
+  <data name="LocationAccessNeeded" xml:space="preserve">
+    <value>Нужен доступ к геопозиции</value>
+  </data>
+  <data name="Longitude" xml:space="preserve">
+    <value>Долгота</value>
+  </data>
+  <data name="MethodEgypt" xml:space="preserve">
+    <value>Египетское генеральное управление геодезии</value>
+  </data>
+  <data name="MethodFrance" xml:space="preserve">
+    <value>Мусульмане Франции</value>
+  </data>
+  <data name="MethodISNA" xml:space="preserve">
+    <value>Исламское общество Северной Америки</value>
+  </data>
+  <data name="MethodJafari" xml:space="preserve">
+    <value>Исследовательский институт Лева, Кум</value>
+  </data>
+  <data name="MethodKarachi" xml:space="preserve">
+    <value>Университет исламских наук, Карачи</value>
+  </data>
+  <data name="MethodMWL" xml:space="preserve">
+    <value>Всемирная исламская лига</value>
+  </data>
+  <data name="MethodMakkah" xml:space="preserve">
+    <value>Университет Умм аль-Кура, Мекка</value>
+  </data>
+  <data name="MethodRussia" xml:space="preserve">
+    <value>Духовное управление мусульман России</value>
+  </data>
+  <data name="MethodSingapore" xml:space="preserve">
+    <value>Исламский религиозный совет Сингапура</value>
+  </data>
+  <data name="MethodTehran" xml:space="preserve">
+    <value>Институт геофизики Тегеранского университета</value>
+  </data>
+  <data name="NextPrayerIn" xml:space="preserve">
+    <value>{0} через {1}</value>
+  </data>
+  <data name="NextPrayerWidgetDescription" xml:space="preserve">
+    <value>Обратный отсчёт до следующего намаза.</value>
+  </data>
+  <data name="NextPrayerWidgetName" xml:space="preserve">
+    <value>Следующий намаз</value>
+  </data>
+  <data name="OpenSujud" xml:space="preserve">
+    <value>Откройте Sujud</value>
+  </data>
+  <data name="PrayerAsr" xml:space="preserve">
+    <value>Аср</value>
+  </data>
+  <data name="PrayerDhuhr" xml:space="preserve">
+    <value>Зухр</value>
+  </data>
+  <data name="PrayerFajr" xml:space="preserve">
+    <value>Фаджр</value>
+  </data>
+  <data name="PrayerIsha" xml:space="preserve">
+    <value>Иша</value>
+  </data>
+  <data name="PrayerMaghrib" xml:space="preserve">
+    <value>Магриб</value>
+  </data>
+  <data name="PrayerSunrise" xml:space="preserve">
+    <value>Восход</value>
+  </data>
+  <data name="PrayerTimeNotification" xml:space="preserve">
+    <value>Время намаза: {0}</value>
+  </data>
+  <data name="PrayerTimes" xml:space="preserve">
+    <value>Время намаза</value>
+  </data>
+  <data name="PrayerTimesWidgetDescription" xml:space="preserve">
+    <value>Время намазов на сегодня и обратный отсчёт до следующего.</value>
+  </data>
+  <data name="PrayerTimesWidgetName" xml:space="preserve">
+    <value>Время намаза</value>
+  </data>
+  <data name="Qibla" xml:space="preserve">
+    <value>Кибла</value>
+  </data>
+  <data name="ReverseCompass" xml:space="preserve">
+    <value>Развернуть компас</value>
+  </data>
+  <data name="SetLocation" xml:space="preserve">
+    <value>Задать местоположение</value>
+  </data>
+  <data name="Tomorrow" xml:space="preserve">
+    <value>{0}, завтра</value>
+  </data>
+</root>

@@ -1,0 +1,8 @@
+namespace Sujud
+{
+    [default_interface]
+    runtimeclass PrayerTimesPage : Microsoft.UI.Xaml.Controls.Page
+    {
+        PrayerTimesPage();
+    }
+}

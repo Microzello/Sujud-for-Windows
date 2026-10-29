@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AppDescription" xml:space="preserve">
+    <value>Bugünün namaz vakitleri ve sonraki namaza geri sayım.</value>
+  </data>
+  <data name="AsrHanafi" xml:space="preserve">
+    <value>Hanefî</value>
+  </data>
+  <data name="AsrMethod" xml:space="preserve">
+    <value>İkindi Hesaplama Yöntemi</value>
+  </data>
+  <data name="AsrStandard" xml:space="preserve">
+    <value>Standart (Şâfiî, Mâlikî, Hanbelî)</value>
+  </data>
+  <data name="AtTime" xml:space="preserve">
+    <value>saat {0}</value>
+  </data>
+  <data name="CalculationMethod" xml:space="preserve">
+    <value>Hesaplama Yöntemi</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>İptal</value>
+  </data>
+  <data name="CardinalE" xml:space="preserve">
+    <value>D</value>
+  </data>
+  <data name="CardinalN" xml:space="preserve">
+    <value>K</value>
+  </data>
+  <data name="CardinalS" xml:space="preserve">
+    <value>G</value>
+  </data>
+  <data name="CardinalW" xml:space="preserve">
+    <value>B</value>
+  </data>
+  <data name="CurrentLocation" xml:space="preserve">
+    <value>Geçerli Konum</value>
+  </data>
+  <data name="InDuration" xml:space="preserve">
+    <value>{0} sonra</value>
+  </data>
+  <data name="Latitude" xml:space="preserve">
+    <value>Enlem</value>
+  </data>
+  <data name="Locating" xml:space="preserve">
+    <value>Konum bulunuyor…</value>
+  </data>
+  <data name="Location" xml:space="preserve">
+    <value>Konum</value>
+  </data>
+  <data name="LocationAccessNeeded" xml:space="preserve">
+    <value>Konum İzni Gerekli</value>
+  </data>
+  <data name="Longitude" xml:space="preserve">
+    <value>Boylam</value>
+  </data>
+  <data name="MethodEgypt" xml:space="preserve">
+    <value>Mısır Genel Harita Kurumu</value>
+  </data>
+  <data name="MethodFrance" xml:space="preserve">
+    <value>Fransa Müslümanları</value>
+  </data>
+  <data name="MethodISNA" xml:space="preserve">
+    <value>Kuzey Amerika İslam Topluluğu</value>
+  </data>
+  <data name="MethodJafari" xml:space="preserve">
+    <value>Leva Araştırma Enstitüsü, Kum</value>
+  </data>
+  <data name="MethodKarachi" xml:space="preserve">
+    <value>İslami İlimler Üniversitesi, Karaçi</value>
+  </data>
+  <data name="MethodMWL" xml:space="preserve">
+    <value>Dünya Müslümanlar Birliği</value>
+  </data>
+  <data name="MethodMakkah" xml:space="preserve">
+    <value>Ümmü’l-Kurâ Üniversitesi, Mekke</value>
+  </data>
+  <data name="MethodRussia" xml:space="preserve">
+    <value>Rusya Müslümanları Dini İdaresi</value>
+  </data>
+  <data name="MethodSingapore" xml:space="preserve">
+    <value>Singapur İslam Din Konseyi</value>
+  </data>
+  <data name="MethodTehran" xml:space="preserve">
+    <value>Tahran Üniversitesi Jeofizik Enstitüsü</value>
+  </data>
+  <data name="NextPrayerIn" xml:space="preserve">
+    <value>{0} vaktine {1}</value>
+  </data>
+  <data name="NextPrayerWidgetDescription" xml:space="preserve">
+    <value>Sonraki namaza geri sayım yapar.</value>
+  </data>
+  <data name="NextPrayerWidgetName" xml:space="preserve">
+    <value>Sonraki Namaz</value>
+  </data>
+  <data name="OpenSujud" xml:space="preserve">
+    <value>Sujud’u açın</value>
+  </data>
+  <data name="PrayerAsr" xml:space="preserve">
+    <value>İkindi</value>
+  </data>
+  <data name="PrayerDhuhr" xml:space="preserve">
+    <value>Öğle</value>
+  </data>
+  <data name="PrayerFajr" xml:space="preserve">
+    <value>İmsak</value>
+  </data>
+  <data name="PrayerIsha" xml:space="preserve">
+    <value>Yatsı</value>
+  </data>
+  <data name="PrayerMaghrib" xml:space="preserve">
+    <value>Akşam</value>
+  </data>
+  <data name="PrayerSunrise" xml:space="preserve">
+    <value>Güneş</value>
+  </data>
+  <data name="PrayerTimeNotification" xml:space="preserve">
+    <value>{0} namazı vakti</value>
+  </data>
+  <data name="PrayerTimes" xml:space="preserve">
+    <value>Namaz Vakitleri</value>
+  </data>
+  <data name="PrayerTimesWidgetDescription" xml:space="preserve">
+    <value>Bugünün namaz vakitleri ve sonraki namaza geri sayım.</value>
+  </data>
+  <data name="PrayerTimesWidgetName" xml:space="preserve">
+    <value>Namaz Vakitleri</value>
+  </data>
+  <data name="Qibla" xml:space="preserve">
+    <value>Kıble</value>
+  </data>
+  <data name="ReverseCompass" xml:space="preserve">
+    <value>Pusulayı ters çevir</value>
+  </data>
+  <data name="SetLocation" xml:space="preserve">
+    <value>Konumu Ayarla</value>
+  </data>
+  <data name="Tomorrow" xml:space="preserve">
+    <value>{0}, yarın</value>
+  </data>
+</root>

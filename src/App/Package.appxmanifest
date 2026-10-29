@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Package
+  xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+  xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+  xmlns:uap3="http://schemas.microsoft.com/appx/manifest/uap/windows10/3"
+  xmlns:com="http://schemas.microsoft.com/appx/manifest/com/windows10"
+  xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
+  IgnorableNamespaces="uap uap3 com rescap">
+
+  <Identity Name="Microzello.Sujud" Publisher="CN=E5A7433F-9B2E-4885-BCB9-A2108EDB0AB5" Version="1.0.1.0" />
+
+  <Properties>
+    <DisplayName>Sujud</DisplayName>
+    <PublisherDisplayName>Microzello</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+  </Properties>
+
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.22621.0" MaxVersionTested="10.0.26100.0" />
+  </Dependencies>
+
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+
+  <Applications>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="$targetentrypoint$">
+      <uap:VisualElements
+        DisplayName="Sujud"
+        Description="ms-resource:AppDescription"
+        BackgroundColor="transparent"
+        Square150x150Logo="Assets\Square150x150Logo.png"
+        Square44x44Logo="Assets\Square44x44Logo.png">
+        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" />
+        <uap:SplashScreen Image="Assets\SplashScreen.png" BackgroundColor="#000000" />
+      </uap:VisualElements>
+
+      <Extensions>
+        <uap:Extension Category="windows.protocol">
+          <uap:Protocol Name="sujud">
+            <uap:DisplayName>Sujud</uap:DisplayName>
+          </uap:Protocol>
+        </uap:Extension>
+
+        <com:Extension Category="windows.comServer">
+          <com:ComServer>
+            <com:ExeServer Executable="Sujud.Agent.exe" Arguments="-RegisterProcessAsComServer" DisplayName="Sujud">
+              <com:Class Id="08A11CE9-C995-4D86-996E-80BAEC40F021" DisplayName="Sujud widgets" />
+              <com:Class Id="DE033780-1FE8-4071-B0CA-10C64A827C04" DisplayName="Sujud refresh" />
+            </com:ExeServer>
+          </com:ComServer>
+        </com:Extension>
+
+        <uap3:Extension Category="windows.appExtension">
+          <uap3:AppExtension Name="com.microsoft.windows.widgets" DisplayName="Sujud" Id="Sujud" PublicFolder="Public">
+            <uap3:Properties>
+              <WidgetProvider>
+                <ProviderIcons>
+                  <Icon Path="Public\Widgets\Icon.png" />
+                </ProviderIcons>
+                <Activation>
+                  <CreateInstance ClassId="08A11CE9-C995-4D86-996E-80BAEC40F021" />
+                </Activation>
+                <Definitions>
+                  <Definition
+                    Id="NextPrayer"
+                    DisplayName="ms-resource:NextPrayerWidgetName"
+                    Description="ms-resource:NextPrayerWidgetDescription"
+                    AllowMultiple="false">
+                    <Capabilities>
+                      <Capability>
+                        <Size Name="small" />
+                      </Capability>
+                      <Capability>
+                        <Size Name="medium" />
+                      </Capability>
+                    </Capabilities>
+                    <ThemeResources>
+                      <Icons>
+                        <Icon Path="Public\Widgets\Icon.png" />
+                      </Icons>
+                      <Screenshots>
+                        <Screenshot Path="Public\Widgets\NextPrayer.png" DisplayAltText="ms-resource:NextPrayerWidgetName" />
+                      </Screenshots>
+                    </ThemeResources>
+                  </Definition>
+                  <Definition
+                    Id="PrayerTimes"
+                    DisplayName="ms-resource:PrayerTimes"
+                    Description="ms-resource:PrayerTimesWidgetDescription"
+                    AllowMultiple="false">
+                    <Capabilities>
+                      <Capability>
+                        <Size Name="small" />
+                      </Capability>
+                      <Capability>
+                        <Size Name="medium" />
+                      </Capability>
+                      <Capability>
+                        <Size Name="large" />
+                      </Capability>
+                    </Capabilities>
+                    <ThemeResources>
+                      <Icons>
+                        <Icon Path="Public\Widgets\Icon.png" />
+                      </Icons>
+                      <Screenshots>
+                        <Screenshot Path="Public\Widgets\PrayerTimes.png" DisplayAltText="ms-resource:PrayerTimes" />
+                      </Screenshots>
+                    </ThemeResources>
+                  </Definition>
+                </Definitions>
+              </WidgetProvider>
+            </uap3:Properties>
+          </uap3:AppExtension>
+        </uap3:Extension>
+      </Extensions>
+    </Application>
+  </Applications>
+
+  <Capabilities>
+    <rescap:Capability Name="runFullTrust" />
+    <DeviceCapability Name="location" />
+  </Capabilities>
+</Package>

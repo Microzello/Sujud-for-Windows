@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AppDescription" xml:space="preserve">
+    <value>আজকের নামাজের সময় এবং পরবর্তী নামাজের কাউন্টডাউন।</value>
+  </data>
+  <data name="AsrHanafi" xml:space="preserve">
+    <value>হানাফি</value>
+  </data>
+  <data name="AsrMethod" xml:space="preserve">
+    <value>আসরের পদ্ধতি</value>
+  </data>
+  <data name="AsrStandard" xml:space="preserve">
+    <value>প্রচলিত (শাফেয়ি, মালিকি, হাম্বলি)</value>
+  </data>
+  <data name="AtTime" xml:space="preserve">
+    <value>{0}-এ</value>
+  </data>
+  <data name="CalculationMethod" xml:space="preserve">
+    <value>হিসাবের পদ্ধতি</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>বাতিল</value>
+  </data>
+  <data name="CardinalE" xml:space="preserve">
+    <value>পূ</value>
+  </data>
+  <data name="CardinalN" xml:space="preserve">
+    <value>উ</value>
+  </data>
+  <data name="CardinalS" xml:space="preserve">
+    <value>দ</value>
+  </data>
+  <data name="CardinalW" xml:space="preserve">
+    <value>প</value>
+  </data>
+  <data name="CurrentLocation" xml:space="preserve">
+    <value>বর্তমান অবস্থান</value>
+  </data>
+  <data name="InDuration" xml:space="preserve">
+    <value>{0} পরে</value>
+  </data>
+  <data name="Latitude" xml:space="preserve">
+    <value>অক্ষাংশ</value>
+  </data>
+  <data name="Locating" xml:space="preserve">
+    <value>অবস্থান খোঁজা হচ্ছে…</value>
+  </data>
+  <data name="Location" xml:space="preserve">
+    <value>অবস্থান</value>
+  </data>
+  <data name="LocationAccessNeeded" xml:space="preserve">
+    <value>অবস্থানের অনুমতি প্রয়োজন</value>
+  </data>
+  <data name="Longitude" xml:space="preserve">
+    <value>দ্রাঘিমাংশ</value>
+  </data>
+  <data name="MethodEgypt" xml:space="preserve">
+    <value>মিশরীয় জেনারেল অথরিটি অব সার্ভে</value>
+  </data>
+  <data name="MethodFrance" xml:space="preserve">
+    <value>ফ্রান্সের মুসলমান</value>
+  </data>
+  <data name="MethodISNA" xml:space="preserve">
+    <value>ইসলামিক সোসাইটি অব নর্থ আমেরিকা</value>
+  </data>
+  <data name="MethodJafari" xml:space="preserve">
+    <value>লেভা গবেষণা ইনস্টিটিউট, কোম</value>
+  </data>
+  <data name="MethodKarachi" xml:space="preserve">
+    <value>ইসলামি বিজ্ঞান বিশ্ববিদ্যালয়, করাচি</value>
+  </data>
+  <data name="MethodMWL" xml:space="preserve">
+    <value>মুসলিম ওয়ার্ল্ড লীগ</value>
+  </data>
+  <data name="MethodMakkah" xml:space="preserve">
+    <value>উম্মুল কুরা বিশ্ববিদ্যালয়, মক্কা</value>
+  </data>
+  <data name="MethodRussia" xml:space="preserve">
+    <value>রাশিয়ার মুসলমানদের আধ্যাত্মিক প্রশাসন</value>
+  </data>
+  <data name="MethodSingapore" xml:space="preserve">
+    <value>সিঙ্গাপুর ইসলামি ধর্মীয় পরিষদ</value>
+  </data>
+  <data name="MethodTehran" xml:space="preserve">
+    <value>ভূপদার্থবিদ্যা ইনস্টিটিউট, তেহরান বিশ্ববিদ্যালয়</value>
+  </data>
+  <data name="NextPrayerIn" xml:space="preserve">
+    <value>{0} {1} পরে</value>
+  </data>
+  <data name="NextPrayerWidgetDescription" xml:space="preserve">
+    <value>পরবর্তী নামাজ পর্যন্ত কাউন্টডাউন।</value>
+  </data>
+  <data name="NextPrayerWidgetName" xml:space="preserve">
+    <value>পরবর্তী নামাজ</value>
+  </data>
+  <data name="OpenSujud" xml:space="preserve">
+    <value>সুজুদ খুলুন</value>
+  </data>
+  <data name="PrayerAsr" xml:space="preserve">
+    <value>আসর</value>
+  </data>
+  <data name="PrayerDhuhr" xml:space="preserve">
+    <value>যোহর</value>
+  </data>
+  <data name="PrayerFajr" xml:space="preserve">
+    <value>ফজর</value>
+  </data>
+  <data name="PrayerIsha" xml:space="preserve">
+    <value>এশা</value>
+  </data>
+  <data name="PrayerMaghrib" xml:space="preserve">
+    <value>মাগরিব</value>
+  </data>
+  <data name="PrayerSunrise" xml:space="preserve">
+    <value>সূর্যোদয়</value>
+  </data>
+  <data name="PrayerTimeNotification" xml:space="preserve">
+    <value>{0} নামাজের সময়</value>
+  </data>
+  <data name="PrayerTimes" xml:space="preserve">
+    <value>নামাজের সময়</value>
+  </data>
+  <data name="PrayerTimesWidgetDescription" xml:space="preserve">
+    <value>আজকের নামাজের সময় এবং পরবর্তী নামাজের কাউন্টডাউন।</value>
+  </data>
+  <data name="PrayerTimesWidgetName" xml:space="preserve">
+    <value>নামাজের সময়</value>
+  </data>
+  <data name="Qibla" xml:space="preserve">
+    <value>কিবলা</value>
+  </data>
+  <data name="ReverseCompass" xml:space="preserve">
+    <value>কম্পাসের দিক উল্টান</value>
+  </data>
+  <data name="SetLocation" xml:space="preserve">
+    <value>অবস্থান নির্ধারণ করুন</value>
+  </data>
+  <data name="Tomorrow" xml:space="preserve">
+    <value>{0}, আগামীকাল</value>
+  </data>
+</root>

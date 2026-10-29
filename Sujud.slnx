@@ -1,0 +1,16 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="ARM64" />
+  </Configurations>
+  <Folder Name="/src/">
+    <Project Path="src/App/Sujud.vcxproj" Id="3f0f5445-32ee-4027-946f-c0d68807605e">
+      <Deploy />
+    </Project>
+    <Project Path="src/Agent/Sujud.Agent.vcxproj" Id="e0763c8c-cb7c-4c66-91a2-782bd35ff08f" />
+    <Project Path="src/Core/Sujud.Core.vcxproj" Id="5583c004-3e7f-466b-a709-7298d8d5f82e" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Core.Tests/Sujud.Core.Tests.vcxproj" Id="3e7f8326-e8ff-4be3-a4c1-ccb906029196" />
+  </Folder>
+</Solution>

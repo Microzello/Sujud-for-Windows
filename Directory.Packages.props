@@ -1,0 +1,15 @@
+<Project>
+  <PropertyGroup>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageVersion Include="Microsoft.WindowsAppSDK" Version="2.6.4" />
+    <PackageVersion Include="Microsoft.WindowsAppSDK.Base" Version="2.6.4" />
+    <PackageVersion Include="Microsoft.WindowsAppSDK.Foundation" Version="2.6.4" />
+    <PackageVersion Include="Microsoft.WindowsAppSDK.InteractiveExperiences" Version="2.6.4" />
+    <PackageVersion Include="Microsoft.WindowsAppSDK.Widgets" Version="2.6.4" />
+    <PackageVersion Include="Microsoft.WindowsAppSDK.Runtime" Version="2.6.4" />
+    <PackageVersion Include="Microsoft.Windows.CppWinRT" Version="2.0.250303.1" />
+    <PackageVersion Include="Microsoft.Windows.ImplementationLibrary" Version="1.0.260126.7" />
+  </ItemGroup>
+</Project>

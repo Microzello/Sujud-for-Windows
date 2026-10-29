@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="Sujud.QiblaPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Background="Transparent">
+    <Page.Resources>
+        <Style x:Key="MajorTick" TargetType="Rectangle">
+            <Setter Property="Width" Value="2" />
+            <Setter Property="Height" Value="18" />
+            <Setter Property="Fill" Value="{ThemeResource TextFillColorPrimaryBrush}" />
+        </Style>
+        <Style x:Key="MinorTick" TargetType="Rectangle">
+            <Setter Property="Width" Value="1" />
+            <Setter Property="Height" Value="9" />
+            <Setter Property="Fill" Value="{ThemeResource TextFillColorSecondaryBrush}" />
+        </Style>
+        <Style x:Key="NorthTick" TargetType="Rectangle" BasedOn="{StaticResource MajorTick}">
+            <Setter Property="Fill" Value="{ThemeResource SystemFillColorCriticalBrush}" />
+        </Style>
+        <Style x:Key="Cardinal" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="25" />
+        </Style>
+        <Style x:Key="North" TargetType="TextBlock" BasedOn="{StaticResource Cardinal}">
+            <Setter Property="FontWeight" Value="Bold" />
+        </Style>
+        <Style x:Key="Kaaba" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="32" />
+            <Setter Property="FontFamily" Value="Segoe UI Emoji" />
+        </Style>
+    </Page.Resources>
+
+    <Grid Padding="32" RowSpacing="32">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState x:Name="NotFacing" />
+                <VisualState x:Name="Facing">
+                    <VisualState.Setters>
+                        <Setter Target="Arrow.Fill" Value="{ThemeResource SystemFillColorSuccessBrush}" />
+                        <Setter Target="Marker.Fill" Value="{ThemeResource SystemFillColorSuccessBrush}" />
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Viewbox MaxWidth="360" MaxHeight="360">
+            <Grid Width="360" Height="360" FlowDirection="LeftToRight">
+                <Grid x:Name="Dial" RenderTransformOrigin="0.5,0.5">
+                    <Grid.RenderTransform>
+                        <RotateTransform x:Name="DialRotation" />
+                    </Grid.RenderTransform>
+                </Grid>
+                <Path
+                    x:Name="Arrow"
+                    Width="72"
+                    Height="96"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Stretch="Uniform"
+                    Data="M 36,0 L 72,96 L 36,74 L 0,96 Z"
+                    Fill="{ThemeResource TextFillColorPrimaryBrush}"
+                    RenderTransformOrigin="0.5,0.5">
+                    <Path.RenderTransform>
+                        <RotateTransform x:Name="ArrowRotation" />
+                    </Path.RenderTransform>
+                </Path>
+                <Rectangle
+                    x:Name="Marker"
+                    Width="3"
+                    Height="25"
+                    RadiusX="1.5"
+                    RadiusY="1.5"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Top"
+                    Margin="0,-32,0,0"
+                    Fill="{ThemeResource TextFillColorPrimaryBrush}" />
+            </Grid>
+        </Viewbox>
+        <TextBlock
+            x:Name="Bearing"
+            Grid.Row="1"
+            HorizontalAlignment="Center"
+            FontFamily="{StaticResource ClockFontFamily}"
+            FontSize="28"
+            FontWeight="SemiBold"
+            Typography.NumeralAlignment="Tabular" />
+        <ToggleSwitch
+            x:Name="Reverse"
+            Grid.Row="2"
+            HorizontalAlignment="Center"
+            Toggled="OnReverseToggled" />
+    </Grid>
+</Page>
