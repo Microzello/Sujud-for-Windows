@@ -9,6 +9,7 @@
     <PackageVersion Include="Microsoft.WindowsAppSDK.InteractiveExperiences" Version="2.6.4" />
     <PackageVersion Include="Microsoft.WindowsAppSDK.Widgets" Version="2.6.4" />
     <PackageVersion Include="Microsoft.WindowsAppSDK.Runtime" Version="2.6.4" />
+    <PackageVersion Include="Microsoft.Gaming.XboxGameBar" Version="7.3.2607010" />
     <PackageVersion Include="Microsoft.Windows.CppWinRT" Version="2.0.250303.1" />
     <PackageVersion Include="Microsoft.Windows.ImplementationLibrary" Version="1.0.260126.7" />
   </ItemGroup>

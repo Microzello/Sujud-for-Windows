@@ -21,13 +21,13 @@ Choose a non-game app and answer "No" to every content question, so it gets the 
 
 ## Packages
 
-Upload `AppPackages\Sujud_1.0.1.0_x64_arm64.msixupload` (built locally, not in the repo). Leave only the Windows Desktop device family selected.
+Upload `AppPackages\Sujud_1.0.5.0_x64_arm64.msixupload` (built locally, not in the repo). Leave only the Windows Desktop device family selected.
 
 ## Submission options
 
 **Restricted capability (runFullTrust)**
 
-> Sujud is a desktop app built on the Windows App SDK. It needs full trust to run a widget provider for Windows widgets and a background task that keeps prayer notifications scheduled.
+> Sujud is a desktop app built on the Windows App SDK. It needs full trust to run a widget provider for Windows widgets, a background task that keeps prayer notifications scheduled, and an MCP server that Windows registers as an agent connector.
 
 **Notes for certification**
 
@@ -37,6 +37,8 @@ Upload `AppPackages\Sujud_1.0.1.0_x64_arm64.msixupload` (built locally, not in t
 > • The calculation method and Asr convention are in Settings (gear icon).
 > • On PCs with a compass, the Qibla dial follows the device. Reverse compass corrects PCs whose sensor reports the heading the wrong way round.
 > • A notification arrives at each prayer time.
+> • Xbox Game Bar: press Win+G, open the Widget menu and choose Sujud. It shows the location set in the app and can be pinned over a game. At each prayer time it shows a Game Bar notification.
+> • Agent connector: the package registers an MCP server (Sujud.Mcp.exe) with Windows for AI agents. It has no window and runs only when an agent starts it.
 
 ## Store listing: English (United States)
 
@@ -52,6 +54,8 @@ Upload `AppPackages\Sujud_1.0.1.0_x64_arm64.msixupload` (built locally, not in t
 >
 > Sujud shows today's six times (Fajr, Sunrise, Dhuhr, Asr, Maghrib and Isha) with a live countdown to the next prayer.
 >
+> Pin the Sujud widget in Xbox Game Bar to keep the countdown over your game, with a Game Bar notification at each prayer time. AI agents on Windows can ask Sujud for prayer times and the Qibla direction too.
+>
 > Use your PC's location, or enter the coordinates of any place. Every time is calculated on your PC, even offline. There are no accounts, ads, or tracking, and your location stays on your PC.
 >
 > Choose a calculation method in Settings. Muslim World League is the default. ISNA, Egypt, Makkah (Umm al-Qura), Karachi, Tehran, Jafari, France, Russia and Singapore are also available, each with Standard or Hanafi Asr.
@@ -63,7 +67,9 @@ Today's six prayer times with a live countdown to the next
 Next Prayer and Prayer Times widgets for the Widgets board
 Small widgets for the lock screen
 A notification at each prayer time
+An Xbox Game Bar widget you can pin over games
 Qibla direction, with a live compass on PCs that have one
+An agent connector for AI agents on Windows
 Ten calculation methods with Standard or Hanafi Asr
 Calculated on your PC and works offline
 No accounts, ads or tracking

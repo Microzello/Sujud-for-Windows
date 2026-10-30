@@ -20,6 +20,7 @@ App::App() {
 }
 
 void App::OnLaunched(LaunchActivatedEventArgs const&) {
+    Resources().MergedDictionaries().InsertAt(0, Controls::XamlControlsResources{});
     window = make<MainWindow>();
     window.Activate();
 

@@ -164,6 +164,21 @@
       <DeploymentContent>true</DeploymentContent>
       <Link>Sujud.Agent.exe</Link>
     </None>
+    <None Include="$(OutDir)..\Sujud.Mcp\Sujud.Mcp.exe">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>Sujud.Mcp.exe</Link>
+    </None>
+    <None Include="..\Mcp\manifest.json">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>Mcp\manifest.json</Link>
+    </None>
+    <None Include="$(OutDir)..\Sujud.GameBar\Sujud.GameBar.exe;$(OutDir)..\Sujud.GameBar\Microsoft.Gaming.XboxGameBar.dll;$(OutDir)..\Sujud.GameBar\Microsoft.Gaming.XboxGameBar.winmd;$(OutDir)..\Sujud.GameBar\Microsoft.Gaming.XboxGameBar.Private.winmd">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(Filename)%(Extension)</Link>
+    </None>
+    <None Include="GameBar\Icons\*.png">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Core\Sujud.Core.vcxproj">
@@ -171,6 +186,14 @@
     </ProjectReference>
     <ProjectReference Include="..\Agent\Sujud.Agent.vcxproj">
       <Project>{E0763C8C-CB7C-4C66-91A2-782BD35FF08F}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\Mcp\Sujud.Mcp.vcxproj">
+      <Project>{7C1D9A52-4B3E-4F8A-9E61-2D5B8C0F3A17}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\GameBar\Sujud.GameBar.vcxproj">
+      <Project>{2B8E5F31-9C47-4D6A-B0E3-5A1F7C9D2E84}</Project>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
   </ItemGroup>

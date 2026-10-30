@@ -1,16 +1,28 @@
 #include "pch.h"
 #include "Strings.h"
 
-#include <winrt/Microsoft.Windows.ApplicationModel.Resources.h>
 #include <winrt/Windows.Globalization.h>
+
+#ifdef SUJUD_UWP_RESOURCES
+#include <winrt/Windows.ApplicationModel.Resources.h>
+#else
+#include <winrt/Microsoft.Windows.ApplicationModel.Resources.h>
+#endif
 
 namespace sujud::strings {
 namespace {
 
+#ifdef SUJUD_UWP_RESOURCES
+winrt::Windows::ApplicationModel::Resources::ResourceLoader const& loader() {
+    static const auto instance = winrt::Windows::ApplicationModel::Resources::ResourceLoader::GetForViewIndependentUse();
+    return instance;
+}
+#else
 winrt::Microsoft::Windows::ApplicationModel::Resources::ResourceLoader const& loader() {
     static const winrt::Microsoft::Windows::ApplicationModel::Resources::ResourceLoader instance;
     return instance;
 }
+#endif
 
 }
 

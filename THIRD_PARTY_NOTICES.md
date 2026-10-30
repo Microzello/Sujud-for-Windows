@@ -28,3 +28,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 ```
+
+## Microsoft Game Bar SDK
+
+The app package includes `Microsoft.Gaming.XboxGameBar.dll` from the [Microsoft.Gaming.XboxGameBar](https://www.nuget.org/packages/Microsoft.Gaming.XboxGameBar) NuGet package, distributed under the Microsoft Software License Terms that come with it. It isn't covered by this repository's MIT license.

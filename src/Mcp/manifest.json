@@ -1,0 +1,225 @@
+{
+  "manifest_version": "0.3",
+  "name": "sujud",
+  "display_name": "Sujud",
+  "version": "1.0.5",
+  "description": "Prayer times, the next prayer and the Qibla direction for any place, calculated on this PC.",
+  "author": {
+    "name": "Omar Ahmed",
+    "email": "omar@omarconsultancy.com",
+    "url": "https://github.com/Microzello/Sujud-for-Windows"
+  },
+  "homepage": "https://github.com/Microzello/Sujud-for-Windows",
+  "license": "MIT",
+  "server": {
+    "type": "binary",
+    "entry_point": "Sujud.Mcp.exe",
+    "mcp_config": {
+      "command": "Sujud.Mcp.exe",
+      "args": []
+    }
+  },
+  "tools": [
+    {
+      "name": "get_prayer_times",
+      "description": "Calculates Fajr, sunrise, Dhuhr, Asr, Maghrib and Isha for a place and date."
+    },
+    {
+      "name": "get_next_prayer",
+      "description": "Finds the next prayer time at a place and how long until it starts."
+    },
+    {
+      "name": "get_qibla_direction",
+      "description": "Gives the direction of the Kaaba in Makkah from a place, as a compass bearing."
+    }
+  ],
+  "tools_generated": false,
+  "compatibility": {
+    "platforms": ["win32"]
+  },
+  "_meta": {
+    "com.microsoft.windows": {
+      "static_responses": {
+        "initialize": {
+          "protocolVersion": "2025-06-18",
+          "capabilities": {
+            "tools": {}
+          },
+          "serverInfo": {
+            "name": "sujud",
+            "title": "Sujud",
+            "version": "1.0.5"
+          },
+          "instructions": "Sujud calculates Islamic prayer times and the Qibla direction offline. It can't see the user's location, so pass the latitude, longitude and IANA time zone of the place the user means."
+        },
+        "tools/list": {
+          "tools": [
+            {
+              "name": "get_prayer_times",
+              "title": "Prayer times",
+              "description": "Calculates Fajr, sunrise, Dhuhr, Asr, Maghrib and Isha for a place and date. Times are ISO 8601 in the place's time zone, or null when the sun never reaches the required angle that day.",
+              "inputSchema": {
+                "type": "object",
+                "properties": {
+                  "latitude": {
+                    "type": "number",
+                    "minimum": -90,
+                    "maximum": 90,
+                    "description": "Latitude in decimal degrees, north positive."
+                  },
+                  "longitude": {
+                    "type": "number",
+                    "minimum": -180,
+                    "maximum": 180,
+                    "description": "Longitude in decimal degrees, east positive."
+                  },
+                  "time_zone": {
+                    "type": "string",
+                    "description": "IANA time zone of the place, such as America/Toronto. Defaults to this PC's time zone."
+                  },
+                  "date": {
+                    "type": "string",
+                    "format": "date",
+                    "description": "Date as YYYY-MM-DD. Defaults to today in the time zone."
+                  },
+                  "method": {
+                    "type": "string",
+                    "enum": ["MWL", "ISNA", "Egypt", "Makkah", "Karachi", "Tehran", "Jafari", "France", "Russia", "Singapore"],
+                    "default": "MWL",
+                    "description": "Calculation method: Muslim World League, Islamic Society of North America, Egyptian General Authority of Survey, Umm al-Qura in Makkah, University of Islamic Sciences in Karachi, University of Tehran, Shia Ithna Ashari (Jafari), UOIF in France, Spiritual Administration of Muslims of Russia, or MUIS in Singapore."
+                  },
+                  "asr": {
+                    "type": "string",
+                    "enum": ["Standard", "Hanafi"],
+                    "default": "Standard",
+                    "description": "Asr convention. Standard is Shafi'i, Maliki and Hanbali; Hanafi is later in the afternoon."
+                  }
+                },
+                "required": ["latitude", "longitude"],
+                "additionalProperties": false
+              },
+              "outputSchema": {
+                "type": "object",
+                "properties": {
+                  "date": { "type": "string", "format": "date" },
+                  "time_zone": { "type": "string" },
+                  "method": { "type": "string" },
+                  "asr": { "type": "string" },
+                  "times": {
+                    "type": "object",
+                    "properties": {
+                      "fajr": { "type": ["string", "null"], "format": "date-time" },
+                      "sunrise": { "type": ["string", "null"], "format": "date-time" },
+                      "dhuhr": { "type": ["string", "null"], "format": "date-time" },
+                      "asr": { "type": ["string", "null"], "format": "date-time" },
+                      "maghrib": { "type": ["string", "null"], "format": "date-time" },
+                      "isha": { "type": ["string", "null"], "format": "date-time" }
+                    },
+                    "required": ["fajr", "sunrise", "dhuhr", "asr", "maghrib", "isha"]
+                  }
+                },
+                "required": ["date", "time_zone", "method", "asr", "times"]
+              },
+              "annotations": {
+                "readOnlyHint": true,
+                "openWorldHint": false
+              }
+            },
+            {
+              "name": "get_next_prayer",
+              "title": "Next prayer",
+              "description": "Finds the next prayer time at a place and how many minutes remain until it. Sunrise counts, because it ends the time for Fajr.",
+              "inputSchema": {
+                "type": "object",
+                "properties": {
+                  "latitude": {
+                    "type": "number",
+                    "minimum": -90,
+                    "maximum": 90,
+                    "description": "Latitude in decimal degrees, north positive."
+                  },
+                  "longitude": {
+                    "type": "number",
+                    "minimum": -180,
+                    "maximum": 180,
+                    "description": "Longitude in decimal degrees, east positive."
+                  },
+                  "time_zone": {
+                    "type": "string",
+                    "description": "IANA time zone of the place, such as America/Toronto. Defaults to this PC's time zone."
+                  },
+                  "method": {
+                    "type": "string",
+                    "enum": ["MWL", "ISNA", "Egypt", "Makkah", "Karachi", "Tehran", "Jafari", "France", "Russia", "Singapore"],
+                    "default": "MWL",
+                    "description": "Calculation method, as for get_prayer_times."
+                  },
+                  "asr": {
+                    "type": "string",
+                    "enum": ["Standard", "Hanafi"],
+                    "default": "Standard",
+                    "description": "Asr convention, as for get_prayer_times."
+                  }
+                },
+                "required": ["latitude", "longitude"],
+                "additionalProperties": false
+              },
+              "outputSchema": {
+                "type": "object",
+                "properties": {
+                  "prayer": { "type": ["string", "null"], "enum": ["fajr", "sunrise", "dhuhr", "asr", "maghrib", "isha", null] },
+                  "time": { "type": ["string", "null"], "format": "date-time" },
+                  "minutes_until": { "type": ["integer", "null"] },
+                  "current": { "type": ["string", "null"], "enum": ["fajr", "sunrise", "dhuhr", "asr", "maghrib", "isha", null] },
+                  "time_zone": { "type": "string" }
+                },
+                "required": ["prayer", "time", "minutes_until", "current", "time_zone"]
+              },
+              "annotations": {
+                "readOnlyHint": true,
+                "openWorldHint": false
+              }
+            },
+            {
+              "name": "get_qibla_direction",
+              "title": "Qibla direction",
+              "description": "Gives the direction of the Kaaba in Makkah from a place, as a bearing clockwise from true north, with the distance along the great circle.",
+              "inputSchema": {
+                "type": "object",
+                "properties": {
+                  "latitude": {
+                    "type": "number",
+                    "minimum": -90,
+                    "maximum": 90,
+                    "description": "Latitude in decimal degrees, north positive."
+                  },
+                  "longitude": {
+                    "type": "number",
+                    "minimum": -180,
+                    "maximum": 180,
+                    "description": "Longitude in decimal degrees, east positive."
+                  }
+                },
+                "required": ["latitude", "longitude"],
+                "additionalProperties": false
+              },
+              "outputSchema": {
+                "type": "object",
+                "properties": {
+                  "bearing_degrees": { "type": "number" },
+                  "compass_point": { "type": "string" },
+                  "distance_km": { "type": "integer" }
+                },
+                "required": ["bearing_degrees", "compass_point", "distance_km"]
+              },
+              "annotations": {
+                "readOnlyHint": true,
+                "openWorldHint": false
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

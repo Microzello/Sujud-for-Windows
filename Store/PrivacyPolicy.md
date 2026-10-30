@@ -1,6 +1,6 @@
 # Sujud for Windows Privacy Policy
 
-_Effective October 29, 2026_
+_Effective October 30, 2026_
 
 Sujud does not collect or share any personal data.
 
@@ -9,6 +9,10 @@ Sujud does not collect or share any personal data.
 **Windows location services.** When you allow location access, Windows works out where your PC is. Microsoft's privacy statement applies to Windows location services.
 
 **Widgets.** Widgets you add show prayer times on the Widgets board and the lock screen. Their content is created on your PC and passed only to Windows to display.
+
+**Xbox Game Bar.** The Sujud widget in Game Bar shows times calculated on your PC from the location and settings saved there. Its prayer time notifications are shown by Game Bar on your PC.
+
+**AI agents.** Sujud includes an agent connector that AI agents on Windows can use to get prayer times and the Qibla direction. The agent passes coordinates to Sujud, and Sujud calculates the answer on your PC without sending anything anywhere. The agent you use has its own privacy terms.
 
 **Notifications.** Prayer time notifications are scheduled locally on your PC.
 

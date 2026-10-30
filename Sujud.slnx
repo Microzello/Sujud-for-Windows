@@ -9,6 +9,8 @@
     </Project>
     <Project Path="src/Agent/Sujud.Agent.vcxproj" Id="e0763c8c-cb7c-4c66-91a2-782bd35ff08f" />
     <Project Path="src/Core/Sujud.Core.vcxproj" Id="5583c004-3e7f-466b-a709-7298d8d5f82e" />
+    <Project Path="src/GameBar/Sujud.GameBar.vcxproj" Id="2b8e5f31-9c47-4d6a-b0e3-5a1f7c9d2e84" />
+    <Project Path="src/Mcp/Sujud.Mcp.vcxproj" Id="7c1d9a52-4b3e-4f8a-9e61-2d5b8c0f3a17" />
   </Folder>
   <Folder Name="/tests/">
     <Project Path="tests/Core.Tests/Sujud.Core.Tests.vcxproj" Id="3e7f8326-e8ff-4be3-a4c1-ccb906029196" />

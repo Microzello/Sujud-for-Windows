@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Holds no WinUI-only types: system XAML in the Game Bar widget also loads this file from the shared package. -->
 <Application
     x:Class="Sujud.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Application.Resources>
         <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries>
-                <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls" />
-            </ResourceDictionary.MergedDictionaries>
             <FontFamily x:Key="ClockFontFamily">Segoe UI Variable Display</FontFamily>
         </ResourceDictionary>
     </Application.Resources>
