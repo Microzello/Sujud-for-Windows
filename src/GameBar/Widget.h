@@ -3,9 +3,9 @@
 #include "sujud/Timetable.h"
 
 #include <optional>
-#include <vector>
 
 #include <winrt/Windows.UI.Composition.h>
+#include <winrt/Windows.UI.Xaml.Documents.h>
 
 namespace sujud::gamebar {
 
@@ -20,6 +20,7 @@ private:
     void applyTheme();
     void notifyIfDue(Status const& status, Instant now);
     winrt::fire_and_forget notify(Event event);
+    winrt::fire_and_forget fitWindow();
     winrt::fire_and_forget onThemeChanged(winrt::Windows::Foundation::IInspectable, winrt::Windows::Foundation::IInspectable);
 
     winrt::Microsoft::Gaming::XboxGameBar::XboxGameBarWidget widget{ nullptr };
@@ -27,12 +28,13 @@ private:
     winrt::Windows::UI::Xaml::DispatcherTimer timer;
     winrt::Microsoft::Gaming::XboxGameBar::XboxGameBarWidget::RequestedThemeChanged_revoker themeChanged;
 
-    winrt::Windows::UI::Xaml::Controls::StackPanel root;
-    winrt::Windows::UI::Xaml::Controls::StackPanel ready;
+    winrt::Windows::UI::Xaml::Controls::Grid root;
+    winrt::Windows::UI::Xaml::UIElement ready{ nullptr };
     winrt::Windows::UI::Xaml::Controls::HyperlinkButton unset;
-    winrt::Windows::UI::Xaml::Controls::TextBlock title;
-    winrt::Windows::UI::Xaml::Controls::TextBlock at;
-    std::vector<winrt::Windows::UI::Composition::DropShadow> shadows;
+    winrt::Windows::UI::Xaml::Controls::TextBlock line;
+    winrt::Windows::UI::Xaml::Documents::Run title;
+    winrt::Windows::UI::Xaml::Documents::Run at;
+    winrt::Windows::UI::Composition::DropShadow shadow{ nullptr };
 
     Instant opened;
     std::optional<Instant> notified;

@@ -8,7 +8,7 @@
   xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
   IgnorableNamespaces="uap uap3 uap5 com rescap">
 
-  <Identity Name="Microzello.Sujud" Publisher="CN=E5A7433F-9B2E-4885-BCB9-A2108EDB0AB5" Version="1.0.5.0" />
+  <Identity Name="Microzello.Sujud" Publisher="CN=E5A7433F-9B2E-4885-BCB9-A2108EDB0AB5" Version="1.0.6.0" />
 
   <Properties>
     <DisplayName>Sujud</DisplayName>
@@ -165,12 +165,12 @@
                 <FavoriteAfterInstall>true</FavoriteAfterInstall>
                 <Window>
                   <Size>
-                    <Height>76</Height>
-                    <Width>240</Width>
-                    <MinHeight>64</MinHeight>
-                    <MinWidth>170</MinWidth>
-                    <MaxHeight>160</MaxHeight>
-                    <MaxWidth>420</MaxWidth>
+                    <Height>40</Height>
+                    <Width>280</Width>
+                    <MinHeight>28</MinHeight>
+                    <MinWidth>140</MinWidth>
+                    <MaxHeight>120</MaxHeight>
+                    <MaxWidth>480</MaxWidth>
                   </Size>
                   <ResizeSupported>
                     <Horizontal>true</Horizontal>

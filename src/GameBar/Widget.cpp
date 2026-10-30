@@ -34,6 +34,9 @@ TextBlock text(double size) {
     return block;
 }
 
+constexpr winrt::Windows::Foundation::Size defaultSize{ 280, 40 };
+constexpr winrt::Windows::Foundation::Size maximumSize{ 480, 120 };
+
 std::wstring timeOf(Instant instant) {
     return clock::shortTime(clock::local(instant));
 }
@@ -47,7 +50,7 @@ UIElement Widget::shadowed(TextBlock const& block) {
     cell.Children().Append(block);
 
     const auto compositor = ElementCompositionPreview::GetElementVisual(cell).Compositor();
-    auto shadow = compositor.CreateDropShadow();
+    shadow = compositor.CreateDropShadow();
     shadow.BlurRadius(6);
     shadow.Offset({ 0, 1, 0 });
     shadow.Mask(block.GetAlphaMask());
@@ -57,22 +60,26 @@ UIElement Widget::shadowed(TextBlock const& block) {
     block.SizeChanged([sprite](auto&&, SizeChangedEventArgs const& e) {
         sprite.Size({ static_cast<float>(e.NewSize().Width), static_cast<float>(e.NewSize().Height) });
     });
-
-    shadows.push_back(shadow);
     return cell;
 }
 
 UIElement Widget::build() {
-    title = text(20);
+    line = text(16);
     title.FontWeight(FontWeights::SemiBold());
-    at = text(14);
-    ready.Children().Append(shadowed(title));
-    ready.Children().Append(shadowed(at));
+    line.Inlines().Append(title);
+    line.Inlines().Append(at);
+    Viewbox fit;
+    fit.StretchDirection(StretchDirection::DownOnly);
+    fit.HorizontalAlignment(HorizontalAlignment::Left);
+    fit.Child(shadowed(line));
+    ready = fit;
 
     unset.Content(winrt::box_value(winrt::hstring{ strings::get(L"SetLocation") }));
+    unset.Padding({ 0 });
     unset.Click([](auto&&, auto&&) { winrt::Windows::System::Launcher::LaunchUriAsync(winrt::Windows::Foundation::Uri{ L"sujud:" }); });
 
-    root.Padding({ 12, 8, 12, 10 });
+    root.Padding({ 10, 2, 10, 2 });
+    root.VerticalAlignment(VerticalAlignment::Center);
     root.FlowDirection(strings::isRightToLeft() ? FlowDirection::RightToLeft : FlowDirection::LeftToRight);
     root.Children().Append(ready);
     root.Children().Append(unset);
@@ -100,6 +107,21 @@ void Widget::start(XboxGameBarWidgetActivatedEventArgs const& args) {
     refresh();
     timer.Start();
     Window::Current().Activate();
+    fitWindow();
+}
+
+// Game Bar restores the window size a widget had in earlier versions, even past
+// today's maximum, and times the widget out if it resizes during activation.
+winrt::fire_and_forget Widget::fitWindow() {
+    const auto strong = get_strong();
+    co_await winrt::resume_background();
+    try {
+        const auto bounds = widget.WindowBounds();
+        if (bounds.Width > maximumSize.Width || bounds.Height > maximumSize.Height) {
+            co_await widget.TryResizeWindowAsync(defaultSize);
+        }
+    } catch (winrt::hresult_error const&) {
+    }
 }
 
 void Widget::stop() {
@@ -121,12 +143,9 @@ void Widget::applyTheme() {
     const auto theme = widget.RequestedTheme();
     const bool light = theme == ElementTheme::Light;
     root.RequestedTheme(theme);
-    title.Foreground(SolidColorBrush{ light ? Color{ 255, 26, 26, 26 } : Color{ 255, 255, 255, 255 } });
-    at.Foreground(SolidColorBrush{ light ? Color{ 230, 26, 26, 26 } : Color{ 230, 255, 255, 255 } });
-    for (auto const& shadow : shadows) {
-        shadow.Color(light ? Color{ 255, 255, 255, 255 } : Color{ 255, 0, 0, 0 });
-        shadow.Opacity(0.9f);
-    }
+    line.Foreground(SolidColorBrush{ light ? Color{ 255, 26, 26, 26 } : Color{ 255, 255, 255, 255 } });
+    shadow.Color(light ? Color{ 255, 255, 255, 255 } : Color{ 255, 0, 0, 0 });
+    shadow.Opacity(0.9f);
 }
 
 void Widget::refresh() {
@@ -146,7 +165,7 @@ void Widget::refresh() {
 
     const auto& next = *status.next;
     title.Text(strings::format(L"NextPrayerIn", { strings::prayer(next.prayer), clock::countdown(now, next.time) }));
-    at.Text(strings::format(L"AtTime", { timeOf(next.time) }));
+    at.Text(L" " + strings::format(L"AtTime", { timeOf(next.time) }));
 }
 
 void Widget::notifyIfDue(Status const& status, Instant now) {

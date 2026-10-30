@@ -21,7 +21,7 @@ Choose a non-game app and answer "No" to every content question, so it gets the 
 
 ## Packages
 
-Upload `AppPackages\Sujud_1.0.5.0_x64_arm64.msixupload` (built locally, not in the repo). Leave only the Windows Desktop device family selected.
+Upload `AppPackages\Sujud_1.0.6.0_x64_arm64.msixupload` (built locally, not in the repo). Leave only the Windows Desktop device family selected.
 
 ## Submission options
 
