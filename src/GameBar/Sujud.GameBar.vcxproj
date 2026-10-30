@@ -85,6 +85,10 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ResourceCompile Include="Sujud.GameBar.rc" />
+    <None Include="app.manifest" />
+  </ItemGroup>
+  <ItemGroup>
     <CopyFileToFolders Include="$(PkgMicrosoft_Gaming_XboxGameBar)\private\Microsoft.Gaming.XboxGameBar.Private.winmd">
       <DestinationFolders>$(OutDir)</DestinationFolders>
     </CopyFileToFolders>

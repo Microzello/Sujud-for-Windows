@@ -39,6 +39,7 @@ Upload `AppPackages\Sujud_1.0.6.0_x64_arm64.msixupload` (built locally, not in t
 > • A notification arrives at each prayer time.
 > • Xbox Game Bar: press Win+G, open the Widget menu and choose Sujud. It shows the location set in the app and can be pinned over a game. At each prayer time it shows a Game Bar notification.
 > • Agent connector: the package registers an MCP server (Sujud.Mcp.exe) with Windows for AI agents. It has no window and runs only when an agent starts it.
+> • The package declares three applications: Sujud itself, the MCP server and the Game Bar widget (a UWP app, as Game Bar requires). Only Sujud appears in Start.
 
 ## Store listing: English (United States)
 

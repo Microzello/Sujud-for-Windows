@@ -55,6 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Sujud.Mcp.rc" />
+    <Manifest Include="app.manifest" />
     <None Include="manifest.json" />
   </ItemGroup>
   <ItemGroup>
