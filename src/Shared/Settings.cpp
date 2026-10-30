@@ -15,6 +15,7 @@ constexpr wchar_t asrKey[] = L"asrMethod";
 constexpr wchar_t latitudeKey[] = L"latitude";
 constexpr wchar_t longitudeKey[] = L"longitude";
 constexpr wchar_t compassReversedKey[] = L"compassReversed";
+constexpr wchar_t fullScreenTimesKey[] = L"fullScreenTimes";
 
 auto values() {
     return ApplicationData::Current().LocalSettings().Values();
@@ -84,6 +85,14 @@ bool compassReversed() {
 
 void setCompassReversed(bool reversed) {
     values().Insert(compassReversedKey, winrt::box_value(reversed));
+}
+
+bool fullScreenTimes() {
+    return winrt::unbox_value_or<bool>(values().TryLookup(fullScreenTimesKey), false);
+}
+
+void setFullScreenTimes(bool show) {
+    values().Insert(fullScreenTimesKey, winrt::box_value(show));
 }
 
 }

@@ -9,6 +9,7 @@
             <StackPanel MaxWidth="640" Padding="20,12,20,24" Spacing="24">
                 <ComboBox x:Name="MethodBox" HorizontalAlignment="Stretch" SelectionChanged="OnMethodChanged" />
                 <RadioButtons x:Name="AsrButtons" SelectionChanged="OnAsrChanged" />
+                <ToggleSwitch x:Name="FullScreenTimes" Toggled="OnFullScreenTimesToggled" />
                 <TextBlock
                     x:Name="Credits"
                     Style="{StaticResource CaptionTextBlockStyle}"

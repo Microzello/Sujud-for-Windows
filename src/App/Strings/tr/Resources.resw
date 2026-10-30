@@ -48,6 +48,9 @@
   <data name="CurrentLocation" xml:space="preserve">
     <value>Geçerli Konum</value>
   </data>
+  <data name="FullScreen" xml:space="preserve">
+    <value>Tam Ekran</value>
+  </data>
   <data name="InDuration" xml:space="preserve">
     <value>{0} sonra</value>
   </data>
@@ -146,6 +149,9 @@
   </data>
   <data name="SetLocation" xml:space="preserve">
     <value>Konumu Ayarla</value>
+  </data>
+  <data name="ShowPrayerTimes" xml:space="preserve">
+    <value>Namaz vakitlerini göster</value>
   </data>
   <data name="Tomorrow" xml:space="preserve">
     <value>{0}, yarın</value>

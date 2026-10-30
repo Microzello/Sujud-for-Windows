@@ -20,4 +20,7 @@ std::optional<Timetable> timetable();
 bool compassReversed();
 void setCompassReversed(bool reversed);
 
+bool fullScreenTimes();
+void setFullScreenTimes(bool show);
+
 }

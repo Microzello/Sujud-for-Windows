@@ -30,6 +30,12 @@ SettingsPage::SettingsPage() {
     }
     AsrButtons().SelectedIndex(static_cast<int32_t>(current.asr));
 
+    FullScreenTimes().Header(box_value(hstring{ ::sujud::strings::get(L"FullScreen") }));
+    const auto showTimes = box_value(hstring{ ::sujud::strings::get(L"ShowPrayerTimes") });
+    FullScreenTimes().OnContent(showTimes);
+    FullScreenTimes().OffContent(showTimes);
+    FullScreenTimes().IsOn(::sujud::settings::fullScreenTimes());
+
     loading = false;
 }
 
@@ -49,6 +55,12 @@ void SettingsPage::OnAsrChanged(IInspectable const&, SelectionChangedEventArgs c
     }
     ::sujud::settings::setAsr(::sujud::asrJuristics[static_cast<std::size_t>(index)]);
     ::sujud::lifecycle::settingsChanged();
+}
+
+void SettingsPage::OnFullScreenTimesToggled(IInspectable const&, Microsoft::UI::Xaml::RoutedEventArgs const&) {
+    if (!loading) {
+        ::sujud::settings::setFullScreenTimes(FullScreenTimes().IsOn());
+    }
 }
 
 }

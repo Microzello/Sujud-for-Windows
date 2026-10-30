@@ -21,7 +21,7 @@ Choose a non-game app and answer "No" to every content question, so it gets the 
 
 ## Packages
 
-Upload `AppPackages\Sujud_1.0.6.0_x64_arm64.msixupload` (built locally, not in the repo). Leave only the Windows Desktop device family selected.
+Upload `AppPackages\Sujud_1.0.7.0_x64_arm64.msixupload` (built locally, not in the repo). Leave only the Windows Desktop device family selected.
 
 ## Submission options
 
@@ -37,6 +37,7 @@ Upload `AppPackages\Sujud_1.0.6.0_x64_arm64.msixupload` (built locally, not in t
 > • The calculation method and Asr convention are in Settings (gear icon).
 > • On PCs with a compass, the Qibla dial follows the device. Reverse compass corrects PCs whose sensor reports the heading the wrong way round.
 > • A notification arrives at each prayer time.
+> • Full screen: the button beside Qibla covers the screen with the countdown to the next prayer and keeps the display on. Any key or click closes it. Settings › Full Screen › Show prayer times adds today's times beside it.
 > • Xbox Game Bar: press Win+G, open the Widget menu and choose Sujud. It shows the location set in the app and can be pinned over a game. At each prayer time it shows a Game Bar notification.
 > • Agent connector: the package registers an MCP server (Sujud.Mcp.exe) with Windows for AI agents. It has no window and runs only when an agent starts it.
 > • The package declares three applications: Sujud itself, the MCP server and the Game Bar widget (a UWP app, as Game Bar requires). Only Sujud appears in Start.
@@ -53,7 +54,7 @@ Upload `AppPackages\Sujud_1.0.6.0_x64_arm64.msixupload` (built locally, not in t
 
 > Prayer times for where you are, and nothing else.
 >
-> Sujud shows today's six times (Fajr, Sunrise, Dhuhr, Asr, Maghrib and Isha) with a live countdown to the next prayer.
+> Sujud shows today's six times (Fajr, Sunrise, Dhuhr, Asr, Maghrib and Isha) with a live countdown to the next prayer. Open it full screen to keep the countdown on a spare display, with the display kept awake.
 >
 > Pin the Sujud widget in Xbox Game Bar to keep the countdown over your game, with a Game Bar notification at each prayer time. AI agents on Windows can ask Sujud for prayer times and the Qibla direction too.
 >
@@ -68,6 +69,7 @@ Today's six prayer times with a live countdown to the next
 Next Prayer and Prayer Times widgets for the Widgets board
 Small widgets for the lock screen
 A notification at each prayer time
+A full screen countdown that keeps the display on
 An Xbox Game Bar widget you can pin over games
 Qibla direction, with a live compass on PCs that have one
 An agent connector for AI agents on Windows

@@ -8,12 +8,14 @@
 #include "QiblaPage.xaml.h"
 #include "SettingsPage.xaml.h"
 
+#include "FullScreen.h"
 #include "Lifecycle.h"
 #include "Settings.h"
 #include "Strings.h"
 
 #include <cmath>
 
+#include <winrt/Microsoft.UI.Xaml.Automation.h>
 #include <winrt/Windows.Devices.Geolocation.h>
 
 using namespace winrt;
@@ -58,7 +60,7 @@ MainWindow::MainWindow() {
 
     const auto window = AppWindow();
     const auto scale = GetDpiForWindow(Microsoft::UI::GetWindowFromWindowId(window.Id())) / 96.0;
-    window.Resize({ static_cast<int32_t>(480 * scale), static_cast<int32_t>(780 * scale) });
+    window.Resize({ static_cast<int32_t>(520 * scale), static_cast<int32_t>(780 * scale) });
     if (const auto presenter = window.Presenter().try_as<Microsoft::UI::Windowing::OverlappedPresenter>()) {
         presenter.PreferredMinimumWidth(static_cast<int32_t>(360 * scale));
         presenter.PreferredMinimumHeight(static_cast<int32_t>(480 * scale));
@@ -67,6 +69,8 @@ MainWindow::MainWindow() {
     Root().FlowDirection(::sujud::strings::isRightToLeft() ? FlowDirection::RightToLeft : FlowDirection::LeftToRight);
     TimesItem().Content(text(L"PrayerTimes"));
     QiblaItem().Content(text(L"Qibla"));
+    Automation::AutomationProperties::SetName(FullScreenItem(), ::sujud::strings::get(L"FullScreen"));
+    ToolTipService::SetToolTip(FullScreenItem(), text(L"FullScreen"));
     LocationItem().Content(text(L"Location"));
     Navigation().SelectedItem(TimesItem());
 
@@ -99,6 +103,8 @@ void MainWindow::OnSelectionChanged(NavigationView const&, NavigationViewSelecti
 void MainWindow::OnItemInvoked(NavigationView const&, NavigationViewItemInvokedEventArgs const& args) {
     if (args.InvokedItemContainer() == LocationItem()) {
         chooseLocation();
+    } else if (args.InvokedItemContainer() == FullScreenItem()) {
+        ::sujud::fullscreen::show(AppWindow().Id());
     }
 }
 

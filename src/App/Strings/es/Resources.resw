@@ -48,6 +48,9 @@
   <data name="CurrentLocation" xml:space="preserve">
     <value>Ubicación actual</value>
   </data>
+  <data name="FullScreen" xml:space="preserve">
+    <value>Pantalla completa</value>
+  </data>
   <data name="InDuration" xml:space="preserve">
     <value>en {0}</value>
   </data>
@@ -146,6 +149,9 @@
   </data>
   <data name="SetLocation" xml:space="preserve">
     <value>Establecer ubicación</value>
+  </data>
+  <data name="ShowPrayerTimes" xml:space="preserve">
+    <value>Mostrar los horarios de oración</value>
   </data>
   <data name="Tomorrow" xml:space="preserve">
     <value>{0}, mañana</value>

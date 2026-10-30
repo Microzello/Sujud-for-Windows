@@ -48,6 +48,9 @@
   <data name="CurrentLocation" xml:space="preserve">
     <value>Текущее местоположение</value>
   </data>
+  <data name="FullScreen" xml:space="preserve">
+    <value>Во весь экран</value>
+  </data>
   <data name="InDuration" xml:space="preserve">
     <value>через {0}</value>
   </data>
@@ -146,6 +149,9 @@
   </data>
   <data name="SetLocation" xml:space="preserve">
     <value>Задать местоположение</value>
+  </data>
+  <data name="ShowPrayerTimes" xml:space="preserve">
+    <value>Показывать время намаза</value>
   </data>
   <data name="Tomorrow" xml:space="preserve">
     <value>{0}, завтра</value>

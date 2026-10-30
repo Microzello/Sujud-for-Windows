@@ -2,7 +2,7 @@
   "manifest_version": "0.3",
   "name": "sujud",
   "display_name": "Sujud",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Prayer times, the next prayer and the Qibla direction for any place, calculated on this PC.",
   "author": {
     "name": "Omar Ahmed",
@@ -48,7 +48,7 @@
           "serverInfo": {
             "name": "sujud",
             "title": "Sujud",
-            "version": "1.0.6"
+            "version": "1.0.7"
           },
           "instructions": "Sujud calculates Islamic prayer times and the Qibla direction offline. It can't see the user's location, so pass the latitude, longitude and IANA time zone of the place the user means."
         },
